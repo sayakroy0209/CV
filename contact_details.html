@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Contact Info</title>
+</head>
+
+<body>
+  <h1 style="font-size:25px; padding-left:35px;">CONTACT DETAILS</h1>
+  <ul style="margin:20px;">
+    <li style="padding-bottom:15px;">
+      Name: Sayak Roy
+    </li>
+    <li style="padding-bottom:15px;">
+      Mobile: 6290409930
+    </li>
+    <li style="padding-bottom:15px;">
+      EmailID: sayak3848@gmail.com
+    </li>
+    <li style="padding-bottom:15px;">
+      Whatsapp No: 8420794964
+    </li>
+    <li style="padding-bottom:15px;">
+      Address: London, UK
+    </li>
+    <li style="padding-bottom:15px;">
+      LinkedIN: <a href="https://www.linkedin.com/in/sayak-roy-398305199" target="_blank">LinkedIN</a>
+    </li>
+  </ul>
+  <hr size='3px' noshade/>
+  <!--Method POST means here is to transfer what the user types into this input fields into the email client-->
+  <!--There is an attribute enctype, means encoding type, the use of the attribute is to specify how the
+      form-data should be encoded. If we dont use enctype attribute then, when we recieve the form-data it
+      has a high chance to be encoded in a wrong format, so this attribute is must. enctype works similar to
+      charset='utf-8'. The main use is for the purpose of encoding-->
+  <!--########################################################################################################-->
+  <!--setting enctype into text/plain because we want to encode our form-data ass it is, dont want any change-->
+  <!--action attribute is to specify where to send the form data when a form is submitted-->
+  <!--method attribute is to specify the HTTP method to use when sending the form data, GET and POST-->
+  <!--GET means getting the form data, and POST means posting the form data menas sending it to the url of action-->
+  <!--enctype attribute specifies how the form data should be encoded when submitting it to the server
+       (only for method="POST"), because when we are using POST as the value of method attribute, that means
+         we are sending the form data, that is the reason enctype is needed to specify in POST method case.-->
+  <!--##########################################################################################################-->
+  <form style="padding-top:15px;" action="mailto:sayak.roy@mindbowser.com" method="post" enctype="text/plain">
+    <label>Your Name:</label>
+    <!--padding is done inside the element within the border, sometime done by increasing the size of the element-->
+    <!--margin is done outside the border of the element, it is never done by increasing the size instead set perfectly-->
+    <!--we have to apply style attribute in the input tag only, not the label tag-->
+    <!--By applying the padding we will increase the size of the input area, it means it is creating space inside the element-->
+    <!--So we need to use margin to create space between two input text of the form, just like here, that creates the space-->
+    <input style="margin-left:15px; margin-bottom:15px;" type="text" name="MyName" value="" /> <br /> <br />
+    <label>Your Email:</label>
+    <input style="margin-left:15px; margin-bottom:15px;" type="email" name="MyEmail" value=""/> <br /> <br />
+    <label>Your Message:</label>
+    <textarea name="MyMessage" rows="4" cols="21"></textarea> <br /> <br />
+    <input type="submit" />
+  </form>
+</body>
+
+</html>
